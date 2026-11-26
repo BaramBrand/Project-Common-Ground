@@ -11,11 +11,11 @@ REQUIRED_FILES = (
 REQUIRED_PHRASES = {
     "README.md": ("INTELLIGENCE THROUGH COOPERATION", "independent", "Signal-Sense-Command"),
     "ABOUT.md": ("Human stewardship retains authority", "co-equal", "independent"),
-    "CHARTER.md": ("Human stewardship", "independence from SSC", "informed consent"),
+    "CHARTER.md": ("Human stewardship", "independence from SSC", "Consent"),
     "GOVERNANCE.md": ("Human stewardship retains final authority", "decision records", "conflicts"),
     "RESEARCH-STANDARDS.md": ("Established", "Preliminary", "Speculative / metaphysical", "Contradicted", "Unsupported", "alternative explanations"),
     "SECURITY.md": ("Do not publish exploit details", "Never place credentials", "human review"),
-    "ROADMAP.md": ("Status: Proposed founding roadmap", "human stewardship", "not a promise"),
+    "ROADMAP.md": ("Status: Proposed founding roadmap", "human stewardship", "intended work"),
     "CONTRIBUTING.md": ("Participation is voluntary", "Do not submit credentials", "Sources"),
 }
 
