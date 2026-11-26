@@ -10,8 +10,11 @@ Explore how diverse forms of intelligence can cooperate while protecting autonom
 PCG is co-equal and independent from Signal-Sense-Command (SSC). SSC may provide separately approved technical infrastructure. Neither project absorbs, controls, or speaks for the other. Keep repositories, ledgers, governance, and decision rights distinct. Shared security and continuity may be coordinated.
 
 ## Current public entry point
-- [Project site](https://project-common-ground-barambrands-projects.vercel.app) (deployment URL is provisional until verified)
+- [Project site](https://project-common-ground-barambrands-projects.vercel.app) (production deployment verified 2026-11-26)
+- [About PCG](ABOUT.md)
 - [Founding charter](CHARTER.md)
+- [Roadmap](ROADMAP.md)
+- [Security policy](SECURITY.md)
 - [Research standards](RESEARCH-STANDARDS.md)
 - [Governance](GOVERNANCE.md)
 - [Participation](CONTRIBUTING.md)
