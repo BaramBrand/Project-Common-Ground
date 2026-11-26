@@ -53,3 +53,14 @@
 4. Consider custom domain only after cost and ownership review; no domain purchase authorized.
 5. Add accessibility checks and automated link/HTML tests.
 6. Keep PCG ledger and SSC engineering ledger separate; record only approved cross-project artifacts.
+
+## Thanksgiving founding reconciliation — 2026-11-26 UTC
+- The canonical main branch remains the production source of truth at commit 0570438b52319d4fc61bdcec501aedbda411c7aa; no production deployment or main-branch change was made by this review branch.
+- Review branch: `docs/pcg-founding-completion-2026-11-26`; draft PR #1: https://github.com/BaramBrand/Project-Common-Ground/pull/1.
+- PR #1 head: `1bba7ca47e25f4ade51f7ac5e6fab35f3250a605`; base main: `0570438b52319d4fc61bdcec501aedbda411c7aa`.
+- Added ABOUT.md, ROADMAP.md and SECURITY.md; updated README.md and index.html. The README now links the verified production site and founding manuals.
+- Preview deployment `dpl_oVZmCoTHUpue9M7TfANZKggKcDxv` is READY at https://project-common-ground-hb7jx0lyv-barambrands-projects.vercel.app. Read-only fetch returned HTTP 200 for the page and all three new Markdown documents.
+- The About and Principles sections are distinct in the final preview HTML; the nav includes About, and the page links the About, roadmap and security documents.
+- No license was added because the owner has not selected one. Until a license is chosen, default copyright applies; public visibility is not an open-source license.
+- The first preview revealed an About/Principles section-boundary defect. It was corrected in commit `1bba7ca47e25f4ade51f7ac5e6fab35f3250a605` and the corrected preview was verified.
+- No production promotion, payment, backend, form, analytics, account setting, access-control or external service change occurred.
