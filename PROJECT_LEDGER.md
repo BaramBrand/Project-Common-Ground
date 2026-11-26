@@ -1,0 +1,55 @@
+# PCG Project Ledger
+**Updated:** 2026-11-26 UTC  
+**Status:** VERIFIED initial public repository and production site
+
+## Canonical identity
+- Project: Project COMMON GROUND (PCG)
+- Repository: https://github.com/BaramBrand/Project-Common-Ground
+- Owner: BaramBrand
+- Visibility: Public
+- Default / production branch: main
+- Scope: independent research, ethics, governance, education, and public-interest collaboration
+- Motto: INTELLIGENCE THROUGH COOPERATION
+
+## Website
+- Vercel project: project-common-ground
+- Project ID: prj_zYfRSabvvb5bdIeNMY92QFlYyp8G
+- Team: barambrands-projects (existing Hobby team)
+- Public domain: https://project-common-ground-barambrands-projects.vercel.app
+- Verified deployment: dpl_9Dq7fE1wQr3ATi9PWHv7dtSPSdnk
+- Verified deployment state: READY; target production
+- Verified source: main at commit 6c876646bb73ed9542977c3e65a6ba8afe90737f
+- Public reachability: TinyFish fetch succeeded; page title and founding content verified.
+- Vercel SSO protection: preview-only; production is publicly accessible. Password protection and trusted-IP restrictions are disabled.
+- No custom domain, backend, analytics, forms, or payment processing configured.
+
+## Initial files
+- index.html: responsive public landing page and founding statement
+- README.md: project overview and links
+- CHARTER.md: founding charter
+- RESEARCH-STANDARDS.md: evidence and research integrity rules
+- GOVERNANCE.md: decision rights and independence framework
+- CONTRIBUTING.md: early contribution guidance
+- PROJECT_LEDGER.md: continuity checkpoint
+
+## Governance boundaries
+- PCG remains independent and co-equal with SSC.
+- SSC may provide separately approved, purpose-limited technical infrastructure; neither project absorbs or controls the other.
+- Human stewardship retains authority over ethics, money, legal commitments, publication, public claims, partnerships, access, and consequential actions.
+- No legal/nonprofit status, formal membership, partners, grants, funding, AI consciousness, or completed research outcomes are claimed without evidence.
+- No spend or paid service was initiated; existing Vercel Hobby team was used.
+
+## Risks and limitations
+- Public repo/site content is now visible to anyone; review public disclosures before adding further detail.
+- No license has been selected; default copyright applies.
+- Early site is static and informational, not a membership platform or operational research portal.
+- Vercel project auto-deploys pushes to main; review changes before committing to main.
+- Preview deployments remain SSO-protected; production deployment is public.
+
+## Next steps
+1. Review founding charter and public language.
+2. Decide project license and contribution/review process before inviting broad contributions.
+3. Add versioned decision log and research archive taxonomy.
+4. Consider custom domain only after cost and ownership review; no domain purchase authorized.
+5. Add accessibility checks and automated link/HTML tests.
+6. Keep PCG ledger and SSC engineering ledger separate; record only approved cross-project artifacts.
