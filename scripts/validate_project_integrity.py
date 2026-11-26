@@ -15,7 +15,7 @@ REQUIRED_PHRASES = {
     "GOVERNANCE.md": ("Human stewardship retains final authority", "decision records", "conflicts"),
     "RESEARCH-STANDARDS.md": ("Established", "Preliminary", "Speculative / metaphysical", "Contradicted", "Unsupported", "alternative explanations"),
     "SECURITY.md": ("Do not publish exploit details", "Never place credentials", "human review"),
-    "ROADMAP.md": ("Status: Proposed founding roadmap", "human stewardship", "intended work"),
+    "ROADMAP.md": ("Proposed founding roadmap", "human stewardship", "intended work"),
     "CONTRIBUTING.md": ("Participation is voluntary", "Do not submit credentials", "Sources"),
 }
 
