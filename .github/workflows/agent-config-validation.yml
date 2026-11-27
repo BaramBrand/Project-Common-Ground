@@ -33,4 +33,4 @@ jobs:
           version: v0.62.0
           target: generic
           strict: ${{ inputs.strict }}
-          fail-on-error: "false"
+          fail-on-error: ${{ inputs.strict }}
