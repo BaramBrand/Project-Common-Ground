@@ -23,7 +23,9 @@ jobs:
     timeout-minutes: 8
     steps:
       - name: Check out repository
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
 
       - name: Validate agent, skill, hook, and MCP configuration
         uses: agent-sh/agnix@66c82e01f10281198449b2ab1ae125d97b3e1c2f
