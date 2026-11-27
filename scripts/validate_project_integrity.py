@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_FILES = (
     "README.md", "ABOUT.md", "CHARTER.md", "GOVERNANCE.md",
     "RESEARCH-STANDARDS.md", "SECURITY.md", "ROADMAP.md", "CONTRIBUTING.md",
+    "OPERATING-CAPACITY.md",
 )
 REQUIRED_PHRASES = {
     "README.md": ("INTELLIGENCE THROUGH COOPERATION", "independent", "Signal-Sense-Command"),
@@ -17,7 +18,14 @@ REQUIRED_PHRASES = {
     "SECURITY.md": ("Do not publish exploit details", "Never place credentials", "human review"),
     "ROADMAP.md": ("Proposed founding roadmap", "human stewardship", "intended work"),
     "CONTRIBUTING.md": ("Participation is voluntary", "Do not submit credentials", "Sources"),
+    "OPERATING-CAPACITY.md": (
+        "45% Signal-Sense-Command (SSC)",
+        "45% Project COMMON GROUND (PCG)",
+        "10% Revenue Foundry (RF)",
+        "AURORA remains a research and paper-trading subsystem within SSC",
+    ),
 }
+
 
 def validate_repository(root: Path = ROOT) -> list[str]:
     errors: list[str] = []
@@ -34,14 +42,16 @@ def validate_repository(root: Path = ROOT) -> list[str]:
                 errors.append(f"{filename}: required governance/research phrase missing: {phrase}")
     return errors
 
+
 def main() -> int:
     errors = validate_repository()
     if errors:
         for error in errors:
             print(f"FAIL: {error}")
         return 1
-    print("PASS: PCG project independence, human stewardship, research evidence and security boundaries")
+    print("PASS: PCG project independence, human stewardship, research evidence, security and capacity boundaries")
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
