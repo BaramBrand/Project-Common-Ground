@@ -1,0 +1,34 @@
+name: Agent Configuration Validation
+
+on:
+  workflow_dispatch:
+    inputs:
+      strict:
+        description: "Treat configuration warnings as errors"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: agent-config-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate agent configuration
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Validate agent, skill, hook, and MCP configuration
+        uses: agent-sh/agnix@66c82e01f10281198449b2ab1ae125d97b3e1c2f
+        with:
+          version: v0.62.0
+          target: generic
+          strict: ${{ inputs.strict }}
+          fail-on-error: "false"
