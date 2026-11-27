@@ -59,3 +59,10 @@ All workflows are `workflow_dispatch` only. No workflow has been run by this int
 3. Add provider credentials only through repository Actions secrets, never in files, comments, logs or artifacts.
 4. For model-backed reviewers, approve provider, usage budget, maximum turns, concurrency, timeout, permitted data scope and whether comments may be posted.
 5. Any generated code must arrive through a branch and pull request. No auto-merge or production deployment.
+
+## Known limits and review notes
+
+- SecureAI-Scan is a specialist LLM/MCP/RAG scanner, not general SAST, secrets detection, dependency auditing or runtime testing. Its documented dependency advisory check reads root `package.json` and `requirements.txt`, not lockfiles, so it does not prove the transitive dependency tree is clean.
+- zizmor-action v0.8.0 is described by its maintainers as early development. The pinned action's bundled `latest` wheel is 1.31.1 while the zizmor project has published newer CLI releases; this integration pins 1.31.1 because that exact wheel is hash-locked in the action release. Revisit when the action publishes a reviewed lock for a newer CLI.
+- AgentShield v1.6.0 has a useful static configuration audit and MIT license, but its reviewed tag object was unsigned. Its optional Opus mode calls Anthropic; do not enable that mode without a separate budget approval. The Action is not installed in this branch.
+- The Marketplace AI-assisted category contains many pages and includes products outside repository agent execution. This is a curated high-relevance screen, not a claim that every Marketplace listing has been exhaustively audited.
