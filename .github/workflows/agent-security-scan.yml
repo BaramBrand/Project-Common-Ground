@@ -12,17 +12,20 @@ concurrency:
 
 jobs:
   scan:
-    name: Scan AI, MCP, and agent surfaces
+    name: Scan AI, MCP, agent, and workflow surfaces
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 20
     steps:
       - name: Check out repository
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-
-      - name: Set up supported Node.js runtime
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
-          node-version: "22.12.0"
+          persist-credentials: false
+
+      - name: Set up Node.js 24
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: "24"
+          package-manager-cache: false
 
       - name: Run SecureAI-Scan
         uses: akanthed/SecureAI-Scan@5fe9187d7cf967785d4944eac805b9723265fc24
@@ -30,3 +33,15 @@ jobs:
           scanner-version: "0.11.0"
           fail-on: ""
           upload-sarif: "false"
+
+      - name: Audit GitHub Actions workflows with zizmor
+        uses: zizmorcore/zizmor-action@53290badfa369cb0bf7ad16342cb62c2fa47ac7b
+        with:
+          inputs: "."
+          collect: "workflows"
+          online-audits: "false"
+          persona: "auditor"
+          version: "1.31.1"
+          advanced-security: "false"
+          annotations: "true"
+          fail-on-no-inputs: "true"
