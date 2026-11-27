@@ -1,0 +1,32 @@
+name: Agent Security Scan
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: agent-security-scan-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    name: Scan AI, MCP, and agent surfaces
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Set up supported Node.js runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: "22.12.0"
+
+      - name: Run SecureAI-Scan
+        uses: akanthed/SecureAI-Scan@5fe9187d7cf967785d4944eac805b9723265fc24
+        with:
+          scanner-version: "0.11.0"
+          fail-on: ""
+          upload-sarif: "false"
