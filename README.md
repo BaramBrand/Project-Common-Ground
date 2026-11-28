@@ -18,6 +18,7 @@ PCG is co-equal and independent from Signal-Sense-Command (SSC). SSC may provide
 - [Research standards](RESEARCH-STANDARDS.md)
 - [Governance](GOVERNANCE.md)
 - [Participation](CONTRIBUTING.md)
+- [Coordinated capacity allocation](OPERATING-CAPACITY.md)
 
 ## Evidence and integrity
 PCG distinguishes established findings, incomplete evidence, preliminary results, plausible hypotheses, speculation, contradicted claims, and unsupported assertions. Mathematical possibility is not empirical evidence. Current AI systems are not presumed conscious, suffering, legally personified, or entitled to rights; those are serious questions for careful research, not launch claims.
