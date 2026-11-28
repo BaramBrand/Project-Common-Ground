@@ -66,6 +66,23 @@ class ProjectIntegrityTests(unittest.TestCase):
             errors = validate_repository(root)
             self.assertTrue(any("OPERATING-CAPACITY.md" in error for error in errors))
 
+    def test_homepage_has_skip_link_and_visible_keyboard_focus(self):
+        html = (self.root / "index.html").read_text(encoding="utf-8")
+        self.assertIn('<a class="skip-link" href="#home">Skip to main content</a>', html)
+        self.assertIn(":focus-visible", html)
+
+    def test_homepage_states_coordinated_allocation_and_equal_partner_split(self):
+        html = (self.root / "index.html").read_text(encoding="utf-8")
+        for phrase in (
+            "45% Signal-Sense-Command (SSC)",
+            "45% Project COMMON GROUND (PCG)",
+            "10% Revenue Foundry (RF)",
+            "50% of the 90% SSC/PCG non-commercial work pool",
+            "not yet instrumented or enforceably allocated",
+        ):
+            self.assertIn(phrase, html)
+        self.assertNotIn("50/50 capacity target", html)
+
 
 if __name__ == "__main__":
     unittest.main()
